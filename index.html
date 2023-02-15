@@ -13,16 +13,120 @@
 </head>
 <body>
     <h2 class="loveyou d-flex justify-content-center">Welcome to Ferdous Mohammed Commercial Bank Limited</h2>
+   
+    <div id="gayebkora" class="container playboy">
+        <h3 class="bestu">Login</h3>
+        <input type="text" class="like form-control" placeholder="email" >
+        <br>
+       <input type="text" class="like  form-control " placeholder="password">
+       <br>
+        <button id="login" class=" btn btn-success">Enter</button>
+    </div>
+
+    <div id="transaction-Area">
+    <div class="row">
+        <h3 class="trans">Transaction Area</h3>
+
+        <div class="col-md-4">
+            <div class="deposit common">
+                <h5>Deposit</h5>
+                <h2>$ 00 <span id="currentDeposit"> </span> </h2>
+            </div>
+                       
+        </div>
+        <div class="col-md-4">
+            <div class="withdraw common">
+                <h5>Withdraw</h5>
+                <h2>$00</h2>
+            </div>
+            
+        </div>
+        <div class="col-md-4">
+            <div class="blance common">
+                <h5>Balance</h5>
+                <h2>$ <span id="currentbalence">1240</span></h2>
+            </div>
+            
+        </div>
+    </div>  
+    
+    <div class="row ">
+        <div class="col-md-6">
+           <div class="playboy">
+            <h4>Deposit</h4>
+            <input id="deposiAmount" type="text" class="form-control" placeholder="$ ammount you want to Deposit">
+            <br>
+            <button id="addDeposit" class="btn btn-success">
+                Deposit
+            </button>
+
+           </div>
+        
+        </div>
+        <div class="col-md-6">
+           <div class="playboy" >
+            <h4>Withdraw</h4>
+            <input type="text" class="form-control" placeholder=" $ ammount you want to Withdraw">
+            <br>
+            <button class="btn btn-success"> Withdraw </button>
+        
+           </div>
+        </div>
+    </div>
 
 
+    </div>
 
+    <!-- div for deposit and withdraw -->
 
-
-
+    
 
 
 
     <script>
+        // gayeb korar kaj = button er throw te pura div k gayeb koira dilam
+
+        const loginbtn = document.getElementById("login");
+        loginbtn.addEventListener('click', function () {
+        const gayebkora = document.getElementById("gayebkora");
+        gayebkora.style.display = "none";
+        const transsactionArea = document.getElementById("transaction-Area");
+        transsactionArea.style.display ="block";
+
+            
+
+        })
+
+// Deposit button
+
+        const depositBtn = document.getElementById("addDeposit");
+        depositBtn.addEventListener("click", function () {
+            const deposiAmount = document.getElementById("deposiAmount").value;
+
+            const depositNumber = parseFloat(deposiAmount);
+
+             const currentDeposit = document.getElementById("currentDeposit").innerText;
+             const currentDepositNumber = parseFloat(currentDeposit);
+
+             const totalDeposit = depositNumber + currentDeposit;
+            
+             
+             document.getElementById("currentDeposit").innerText = totalDeposit;
+
+
+             const currentbalence = document.getElementById("currentbalence").innerText;
+             const currentbalenceNumber = parseFloat(currentbalence);
+
+             const totalbalance = depositNumber + currentbalenceNumber;
+            
+             
+             document.getElementById("currentbalence").innerText = totalDeposit;
+              
+
+
+             document.getElementById("deposiAmount").value = "";
+        })
+
 
     </script>
 </body>

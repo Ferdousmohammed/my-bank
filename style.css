@@ -1,4 +1,39 @@
  .loveyou {
     color:  red;
-    padding: 25px;
+    padding: 55px;
 } 
+
+
+.playboy {
+    box-shadow:  5px 7px 14px grey;
+    margin: 80px;
+    padding: 55px;
+    border-radius: 15px;
+}
+
+  #transaction-Area {
+    display: none;
+    margin: 25px;
+
+
+}
+.deposit {
+    background-color:  slateblue;
+}
+
+.withdraw {
+    background-color: lightgreen;
+}
+.blance {
+    background-color: red;
+}
+.common {
+    margin: 0 20px ;
+    padding: 25px;
+    border-radius: 15px;
+    color: aliceblue;
+}
+.trans  {
+    margin-left: 20px;
+    padding: 30px;
+}
